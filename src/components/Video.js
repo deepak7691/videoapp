@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 const Video = () => {
   const location = useLocation();
   const videoData = location.state ? location.state.videoData : null;
-  const { description, mediaUrl, thumbnail, title } = videoData.submission;
+  const {  mediaUrl } = videoData.submission;
 
   return (
     <div className='w-[100%] h-[100vh]'>
