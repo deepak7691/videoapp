@@ -13,18 +13,15 @@ const Home = () => {
   };
 
   useEffect(() => {
-    getData();
+      setLoading(true);
+      fetch(`https://internship-service.onrender.com/videos?page=${page}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setLoading(false);
+          setVideos(data.data.posts);
+        });
   }, [page]);
 
-  const getData = () => {
-    setLoading(true);
-    fetch(`https://internship-service.onrender.com/videos?page=${page}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setLoading(false);
-        setVideos(data.data.posts);
-      });
-  };
 
   const pageNumbers = [...Array(10).keys()]; // Generate an array of page numbers 0 to 9
 
