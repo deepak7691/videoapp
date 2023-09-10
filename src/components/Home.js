@@ -36,12 +36,12 @@ const Home = () => {
         </div>
       ) : (
         <div className="w-[100%]">
-          <div className="flex flex-col w-[70%] h-[100%] mx-auto">
+          <div className="flex flex-col w-[85%] h-[100%] mx-auto">
             {videos.map((video, index) => (
               <Card key={index} videoData={video} />
             ))}
           </div>
-          <div className="flex  justify-evenly items-center mb-16 mt-16 w-[40%] mx-auto">
+          <div className="flex w-[100%]  justify-evenly items-center mb-16 mt-16 lg:w-[40%] mx-auto">
             {pageNumbers.map((pageNumber) => (
               <button
                 key={pageNumber}

@@ -41,8 +41,8 @@ const Card = ({ videoData }) => {
   };
 
   return (
-    <div className="w-full md:w-3/6 mx-auto my-8 relative bg-slate-50 shadow-lg">
-      <img src={play} className="absolute top-[50%] left-[35%]" onClick={playVideo} alt="play"/>
+    <div className="w-full md:w-3/6  sm:w-full mx-auto my-8 relative bg-slate-50 shadow-lg mb-20">
+      <img src={play} className="absolute top-[19.75rem] left-[7.75rem] lg:top-[50%] lg:left-[35%]" onClick={playVideo} alt="play"/>
       <div className="flex  md:flex-row justify-between items-center gap-2 my-2 p-3">
         <div className="flex gap-4 items-center">
           <img src={pic} className="w-10 h-10 rounded-full" alt="pic" />
@@ -70,11 +70,11 @@ const Card = ({ videoData }) => {
           onClick={playVideo}
           alt={thumbnail}
         />
-        <div className="flex flex-col gap-14 absolute bottom-2 right-8">
+        <div className="flex flex-row gap-14  items-center absolute bottom-[-4.6rem] lg:flex-col lg:bottom-2 lg:right-8">
           <div>
             <img src={whastapp} alt="whatsapp" className="w-8 cursor-pointer" onClick={shareOnWhatsApp} />
           </div>
-          <div className="relative flex flex-col items-center ">
+          <div className="relative flex flex-row  items-center lg:flex-col">
             <i
               className={`${
                 liked
@@ -85,11 +85,11 @@ const Card = ({ videoData }) => {
             ></i>
             <p className="text-center">{likeCount}</p>
           </div>
-          <div>
+          <div className="flex flex-row  items-center lg:flex-col" >
             <img src={comments} alt="comments" className="w-8 cursor-pointer"/>
             <p className="text-center">{comment.count}</p>
           </div>
-          <div className="mb-5">
+          <div className="lg:mb-5">
             <img src={download} alt="download" className="w-8 cursor-pointer" />
           </div>
         </div>
